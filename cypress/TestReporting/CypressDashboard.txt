@@ -1,0 +1,116 @@
+D:\Cypress\Rapid-POS>npx cypress run --record --key 1f57dafb-1685-49da-a290-fd5a6ead47eb --browser chrome
+
+
+DevTools listening on ws://127.0.0.1:57076/devtools/browser/85e3c353-6865-4eda-8173-e67cb31057d6
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        13.14.1                                                                        │
+  │ Browser:        Chrome 128 (headless)                                                          │
+  │ Node Version:   v20.11.1 (C:\Program Files\nodejs\node.exe)                                    │
+  │ Specs:          1 found (Login.cy.js)                                                          │
+  │ Searched:       cypress/e2e/**/*.cy.{js,jsx,ts,tsx}                                            │
+  │ Params:         Tag: false, Group: false, Parallel: false                                      │
+  │ Run URL:        https://cloud.cypress.io/projects/hgsdjy/runs/6                                │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Running:  Login.cy.js                                                                     (1 of 1)
+  Estimated: 58 seconds
+
+
+  QA-Engineer-Take-Home-Evaluation
+    √ TC-PR-001_Valid Login (4305ms)
+    √ TC-PR-002_Login with Case-Sensitive Username (3474ms)
+    √ TC-PR-003_Invalid Username format (3376ms)
+    √ TC-PR-004_Empty Username (3459ms)
+    √ TC-PR-005_Missing Username (3656ms)
+    √ TC-PR-006_Empty Password (3352ms)
+    √ TC-PR-007_Missing Password (3683ms)
+    √ TC-PR-008_Empty Username and Password (3656ms)
+    √ TC-PR-009_Missing Username and Password (3472ms)
+    √ TC-PR-010_Invalid Login (3558ms)
+    √ TC-PR-011_Malformed JSON Response (3397ms)
+    √ TC-PR-012_Server Error (3517ms)
+    √ TC-PR-013_Slow Response (5704ms)
+    √ TC-PR-014_SQL Injection Attempt (3703ms)
+    √ TC-PR-015_Different Content Types (3231ms)
+
+  QA-Engineer-Take-Home-Evaluation
+    √ TC-PR-016_Brute Force Attack Mitigation (583ms)
+    1) TC-PR-016_Brute Force Attack Mitigation
+
+
+  16 passing (58s)
+  1 failing
+
+  1) QA-Engineer-Take-Home-Evaluation
+       TC-PR-016_Brute Force Attack Mitigation:
+
+      AssertionError: expected 429 to equal 200
+      + expected - actual
+
+      -429
+      +200
+
+      at loginChecking.checkInvalidLoginResponse (webpack:///./cypress/checking/LoginChecking.js:33:36)
+      at Context.eval (webpack:///./cypress/modules/LoginModule.js:22:30)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        17                                                                               │
+  │ Passing:      16                                                                               │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  1                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     58 seconds                                                                       │
+  │ Estimated:    58 seconds                                                                       │
+  │ Spec Ran:     Login.cy.js                                                                      │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  D:\Cypress\Rapid-POS\cypress\screenshots\Login.cy.js\QA-Engineer-Take-Home-Evalu     (1000x573)
+     ation -- TC-PR-016_Brute Force Attack Mitigation (failed).png
+
+
+  (Uploading Cloud Artifacts)
+
+  - Video - Nothing to upload
+  - Screenshot - 25 kB D:\Cypress\Rapid-POS\cypress\screenshots\Login.cy.js\QA-Engineer-Take-Home-Evaluation -- TC-PR-016_Brute Force Attack Mitigation (failed).png
+  - Test Replay - 63 kB
+
+  Uploading Cloud Artifacts: . 
+
+  (Uploaded Cloud Artifacts)
+
+  - Screenshot - Done Uploading 25 kB in 1s 1/2 D:\Cypress\Rapid-POS\cypress\screenshots\Login.cy.js\QA-Engineer-Take-Home-Evaluation -- TC-PR-016_Brute Force Attack Mitigation (failed).png
+  - Test Replay - Done Uploading 63 kB in 1s 2/2
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ×  Login.cy.js                              00:58       17       16        1        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ×  1 of 1 failed (100%)                     00:58       17       16        1        -        -
+
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  Recorded Run: https://cloud.cypress.io/projects/hgsdjy/runs/6
