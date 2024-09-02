@@ -1,0 +1,155 @@
+{
+  "validLogin" : {
+    "requestType": "POST",
+    "contentType": "application/json",
+    "username": "valid@example.com",
+    "password": "test1234",
+    "testType": "valid",
+    "statusCode": 200
+  },
+
+  "validLoginUpperCase" : {
+    "requestType": "POST",
+    "contentType": "application/json",
+    "username": "VALID@example.com",
+    "password": "test1234",
+    "testType": "valid",
+    "statusCode": 200
+  },
+
+  "invalidUsernameFormat" : {
+    "requestType": "POST",
+    "contentType": "application/json",
+    "username": "valid",
+    "password": "test1234",
+    "testType": "invalid",
+    "errorMessage": "Invalid email address.",
+    "statusCode": 400
+  },
+
+  "emptyUsername" : {
+    "requestType": "POST",
+    "contentType": "application/json",
+    "username": "",
+    "password": "test1234",
+    "testType": "invalid",
+    "errorMessage": "Username and password are required.",
+    "statusCode": 400
+  },
+
+  "missingUsername" : {
+    "requestType": "POST",
+    "contentType": "application/json",
+    "username": "valid",
+    "password": "test1234",
+    "testType": "invalid",
+    "errorMessage": "Username and password are required.",
+    "statusCode": 400
+  },
+
+  "emptyPassword" : {
+    "requestType": "POST",
+    "contentType": "application/json",
+    "username": "valid@example.com",
+    "password": "",
+    "testType": "invalid",
+    "errorMessage": "Username and password are required.",
+    "statusCode": 400
+  },
+
+  "missingPassword" : {
+    "requestType": "POST",
+    "contentType": "application/json",
+    "username": "valid@example.com",
+    "password": "test1234",
+    "testType": "invalid",
+    "errorMessage": "Username and password are required.",
+    "statusCode": 400
+  },
+
+  "emptyUsernameAndPassword" : {
+    "requestType": "POST",
+    "contentType": "application/json",
+    "username": "",
+    "password": "",
+    "testType": "invalid",
+    "errorMessage": "Username and password are required.",
+    "statusCode": 400
+  },
+
+  "missingUsernameAndPassword" : {
+    "requestType": "POST",
+    "contentType": "application/json",
+    "username": "valid",
+    "password": "test1234",
+    "testType": "invalid",
+    "errorMessage": "Username and password are required.",
+    "statusCode": 400
+  },
+
+  "invalidLogin" : {
+    "requestType": "POST",
+    "contentType": "application/json",
+    "username": "invaliduser@example.com",
+    "password": "test1234",
+    "testType": "invalid",
+    "errorMessage": "Username and password are required.",
+    "statusCode": 401
+  },
+
+  "malformedToken" : {
+    "requestType": "POST",
+    "contentType": "application/json",
+    "username": "malformeduser@example.com",
+    "password": "test1234",
+    "testType": "malformedToken",
+    "statusCode": 200
+  },
+
+  "serverError" : {
+    "requestType": "POST",
+    "contentType": "application/json",
+    "username": "erroruser@example.com",
+    "password": "test1234",
+    "testType": "invalid",
+    "statusCode": 500
+  },
+
+  "slowResponse" : {
+    "requestType": "POST",
+    "contentType": "application/json",
+    "username": "slowuser@example.com",
+    "password": "test1234",
+    "testType": "slowResponse",
+    "statusCode": 200
+  },
+
+  "sqlInjectionAttempt" : {
+    "requestType": "POST",
+    "contentType": "application/json",
+    "username": "' OR '1'='1",
+    "password": "test1234",
+    "testType": "invalid",
+    "errorMessage": "Invalid email address.",
+    "statusCode": 400
+  },
+
+  "differentContentType" : {
+    "requestType": "POST",
+    "contentType": "application/x-www-form-urlencoded",
+    "username": "valid@example.com",
+    "password": "test1234",
+    "testType": "invalid",
+    "statusCode": 415
+  },
+
+  "bruteForceAttack" : {
+    "requestType": "POST",
+    "contentType": "application/json",
+    "username": "valid@example.com",
+    "password": "test1234",
+    "testType": "invalid",
+    "errorMessage": "Too many requests. Please try again later.",
+    "statusCode": 429
+  }
+}
